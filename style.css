@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    box-sizing: border-box;
+    min-height: 100vh;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: consolas;
+}
+
+.container {
+    position: relative;
+    padding: 10rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 16px;
+    width: 30rem;
+    transition: all 2s;
+    margin: 3rem;
+}
+
+.card__content {
+    position: relative;
+    background-color: #333;
+    width: 100%;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 16px;
+    height: 20rem;
+    opacity: .2;
+    transition: all 1s;
+    transform: translateY(10rem);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 1);
+}
+
+.card:hover .card__content {
+    opacity: 1;
+    color: #fff;
+    background-color: #ff0057;
+    transform: translateY(0);
+}
+
+
+.card__image {
+    margin-bottom: 2rem;
+    width: 10rem;
+    font-size: 10rem;
+    opacity: 1;
+    color: #fff;
+}
+
+.card:hover .card__content .card__image {
+    color: #fff;
+}
+
+.card__heading {
+    margin-bottom: 2rem;
+}
+
+.card__text {
+    opacity: 0;
+    background-color: #eee;
+    padding: 2rem;
+    transition: all 1s;
+    transform: translateY(-10rem);
+    text-align: left;
+}
+
+.card:hover .card__text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card__text p {
+    margin-bottom: 2rem;
+}
+
+.card__link:link,
+.card__link:active {
+    text-decoration: none;
+    border: 2px solid #333;
+    padding: 5px 10px;
+    color: #333;
+    display: inline-block;
+    transition: all .5s;
+}
+
+.card__link:hover,
+.card__link:hover:active {
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    box-shadow: 0 1rem 2rem #333;
+    border: 2px solid #333;
+}
+
+.card__link:hover:active {
+    transform: translateY(-3px);
+}
